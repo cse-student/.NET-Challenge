@@ -1,0 +1,12 @@
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentSystem.Core\bin\Debug\netcoreapp3.0\PaymentSystem.Core.deps.json
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentSystem.Core\bin\Debug\netcoreapp3.0\PaymentSystem.Core.dll
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentSystem.Core\bin\Debug\netcoreapp3.0\PaymentSystem.Core.pdb
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentSystem.Core\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentSystem.Core\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentSystem.Core\obj\Debug\netcoreapp3.0\PaymentSystem.Core.csprojAssemblyReference.cache
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentSystem.Core\obj\Debug\netcoreapp3.0\PaymentSystem.Core.csproj.CoreCompileInputs.cache
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentSystem.Core\obj\Debug\netcoreapp3.0\PaymentSystem.Core.AssemblyInfoInputs.cache
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentSystem.Core\obj\Debug\netcoreapp3.0\PaymentSystem.Core.AssemblyInfo.cs
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentSystem.Core\obj\Debug\netcoreapp3.0\PaymentSystem.Core.csproj.CopyComplete
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentSystem.Core\obj\Debug\netcoreapp3.0\PaymentSystem.Core.dll
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentSystem.Core\obj\Debug\netcoreapp3.0\PaymentSystem.Core.pdb

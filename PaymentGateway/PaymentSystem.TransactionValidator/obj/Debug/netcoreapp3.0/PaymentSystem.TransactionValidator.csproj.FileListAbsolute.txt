@@ -1,0 +1,12 @@
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\bin\Debug\netcoreapp3.0\PaymentSystem.TransactionValidator.deps.json
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\bin\Debug\netcoreapp3.0\PaymentSystem.TransactionValidator.dll
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\bin\Debug\netcoreapp3.0\PaymentSystem.TransactionValidator.pdb
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\bin\Debug\netcoreapp3.0\PaymentSystem.Core.dll
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\bin\Debug\netcoreapp3.0\PaymentSystem.Core.pdb
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\obj\Debug\netcoreapp3.0\PaymentSystem.TransactionValidator.csprojAssemblyReference.cache
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\obj\Debug\netcoreapp3.0\PaymentSystem.TransactionValidator.csproj.CoreCompileInputs.cache
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\obj\Debug\netcoreapp3.0\PaymentSystem.TransactionValidator.AssemblyInfoInputs.cache
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\obj\Debug\netcoreapp3.0\PaymentSystem.TransactionValidator.AssemblyInfo.cs
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\obj\Debug\netcoreapp3.0\PaymentSystem.TransactionValidator.csproj.CopyComplete
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\obj\Debug\netcoreapp3.0\PaymentSystem.TransactionValidator.dll
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\obj\Debug\netcoreapp3.0\PaymentSystem.TransactionValidator.pdb

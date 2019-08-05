@@ -1,0 +1,289 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem\\PaymentSystem.Gateway.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\Payment.Infrastructure\\PaymentSystem.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\Payment.Infrastructure\\PaymentSystem.Infrastructure.csproj",
+        "projectName": "PaymentSystem.Infrastructure",
+        "projectPath": "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\Payment.Infrastructure\\PaymentSystem.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Akhilesh Pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\Payment.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Akhilesh Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem.Core\\PaymentSystem.Core.csproj": {
+                "projectPath": "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem.Core\\PaymentSystem.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "CouchbaseNetClient": {
+              "target": "Package",
+              "version": "[2.7.10, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem.Core\\PaymentSystem.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem.Core\\PaymentSystem.Core.csproj",
+        "projectName": "PaymentSystem.Core",
+        "projectPath": "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem.Core\\PaymentSystem.Core.csproj",
+        "packagesPath": "C:\\Users\\Akhilesh Pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Akhilesh Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "CouchbaseNetClient": {
+              "target": "Package",
+              "version": "[2.7.10, )"
+            },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.12.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem.TransactionValidator\\PaymentSystem.BankProvider.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem.TransactionValidator\\PaymentSystem.BankProvider.csproj",
+        "projectName": "PaymentSystem.BankProvider",
+        "projectPath": "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem.TransactionValidator\\PaymentSystem.BankProvider.csproj",
+        "packagesPath": "C:\\Users\\Akhilesh Pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem.TransactionValidator\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Akhilesh Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem.Core\\PaymentSystem.Core.csproj": {
+                "projectPath": "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem.Core\\PaymentSystem.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem\\PaymentSystem.Gateway.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem\\PaymentSystem.Gateway.csproj",
+        "projectName": "PaymentSystem.Gateway",
+        "projectPath": "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem\\PaymentSystem.Gateway.csproj",
+        "packagesPath": "C:\\Users\\Akhilesh Pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Akhilesh Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\Payment.Infrastructure\\PaymentSystem.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\Payment.Infrastructure\\PaymentSystem.Infrastructure.csproj"
+              },
+              "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem.Core\\PaymentSystem.Core.csproj": {
+                "projectPath": "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem.Core\\PaymentSystem.Core.csproj"
+              },
+              "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem.TransactionValidator\\PaymentSystem.BankProvider.csproj": {
+                "projectPath": "C:\\Users\\Akhilesh Pc\\Documents\\Git\\.NET-Challenge\\PaymentGateway\\PaymentSystem.TransactionValidator\\PaymentSystem.BankProvider.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "CouchbaseNetClient": {
+              "target": "Package",
+              "version": "[2.7.10, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.12.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

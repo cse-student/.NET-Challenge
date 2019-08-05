@@ -1,0 +1,17 @@
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\BankSimulator\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\BankSimulator\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\BankSimulator\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\BankSimulator\bin\Debug\netcoreapp2.1\BankSimulator.deps.json
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\BankSimulator\bin\Debug\netcoreapp2.1\BankSimulator.runtimeconfig.json
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\BankSimulator\bin\Debug\netcoreapp2.1\BankSimulator.runtimeconfig.dev.json
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\BankSimulator\bin\Debug\netcoreapp2.1\BankSimulator.dll
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\BankSimulator\bin\Debug\netcoreapp2.1\BankSimulator.pdb
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\BankSimulator\obj\Debug\netcoreapp2.1\BankSimulator.csprojAssemblyReference.cache
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\BankSimulator\obj\Debug\netcoreapp2.1\BankSimulator.csproj.CoreCompileInputs.cache
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\BankSimulator\obj\Debug\netcoreapp2.1\BankSimulator.RazorAssemblyInfo.cache
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\BankSimulator\obj\Debug\netcoreapp2.1\BankSimulator.RazorAssemblyInfo.cs
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\BankSimulator\obj\Debug\netcoreapp2.1\BankSimulator.AssemblyInfoInputs.cache
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\BankSimulator\obj\Debug\netcoreapp2.1\BankSimulator.AssemblyInfo.cs
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\BankSimulator\obj\Debug\netcoreapp2.1\BankSimulator.RazorTargetAssemblyInfo.cache
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\BankSimulator\obj\Debug\netcoreapp2.1\BankSimulator.dll
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\BankSimulator\obj\Debug\netcoreapp2.1\BankSimulator.pdb

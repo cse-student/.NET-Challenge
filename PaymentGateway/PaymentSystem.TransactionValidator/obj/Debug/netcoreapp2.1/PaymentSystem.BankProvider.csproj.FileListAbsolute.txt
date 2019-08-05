@@ -1,0 +1,12 @@
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\obj\Debug\netcoreapp2.1\PaymentSystem.BankProvider.csprojAssemblyReference.cache
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\obj\Debug\netcoreapp2.1\PaymentSystem.BankProvider.csproj.CoreCompileInputs.cache
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\obj\Debug\netcoreapp2.1\PaymentSystem.BankProvider.AssemblyInfoInputs.cache
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\obj\Debug\netcoreapp2.1\PaymentSystem.BankProvider.AssemblyInfo.cs
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\bin\Debug\netcoreapp2.1\PaymentSystem.BankProvider.deps.json
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\bin\Debug\netcoreapp2.1\PaymentSystem.BankProvider.dll
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\bin\Debug\netcoreapp2.1\PaymentSystem.BankProvider.pdb
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\bin\Debug\netcoreapp2.1\PaymentSystem.Core.dll
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\bin\Debug\netcoreapp2.1\PaymentSystem.Core.pdb
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\obj\Debug\netcoreapp2.1\PaymentSystem.BankProvider.csproj.CopyComplete
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\obj\Debug\netcoreapp2.1\PaymentSystem.BankProvider.dll
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentGateway\PaymentSystem.TransactionValidator\obj\Debug\netcoreapp2.1\PaymentSystem.BankProvider.pdb

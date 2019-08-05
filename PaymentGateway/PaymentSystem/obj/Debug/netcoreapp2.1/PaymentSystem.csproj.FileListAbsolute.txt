@@ -1,0 +1,6 @@
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentSystem\obj\Debug\netcoreapp2.1\PaymentSystem.csprojAssemblyReference.cache
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentSystem\obj\Debug\netcoreapp2.1\PaymentSystem.csproj.CoreCompileInputs.cache
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentSystem\obj\Debug\netcoreapp2.1\PaymentSystem.RazorAssemblyInfo.cache
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentSystem\obj\Debug\netcoreapp2.1\PaymentSystem.RazorAssemblyInfo.cs
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentSystem\obj\Debug\netcoreapp2.1\PaymentSystem.AssemblyInfoInputs.cache
+C:\Users\Akhilesh Pc\Documents\Git\.NET-Challenge\PaymentSystem\obj\Debug\netcoreapp2.1\PaymentSystem.AssemblyInfo.cs
