@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "399be4c2-23cd-47c5-a540-288226fdcf93",
+		"name": "Payment System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Process Payment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "transactionInfo={\n\t\"cardNumber\" = \"4850 1801 0051 3665\"\n}"
+				},
+				"url": {
+					"raw": "https://paymentgateway:5001/gateway/processpayment?cardNumber=4850180100513665&expiryDate=08/19&amount=100.0&Currency=$&Cvv=769&merchantId=f2d11dfd-7c4c-4640-a751-1481916493cf",
+					"protocol": "https",
+					"host": [
+						"paymentgateway"
+					],
+					"port": "5001",
+					"path": [
+						"gateway",
+						"processpayment"
+					],
+					"query": [
+						{
+							"key": "cardNumber",
+							"value": "4850180100513665"
+						},
+						{
+							"key": "expiryDate",
+							"value": "08/19"
+						},
+						{
+							"key": "amount",
+							"value": "100.0"
+						},
+						{
+							"key": "Currency",
+							"value": "$"
+						},
+						{
+							"key": "Cvv",
+							"value": "769"
+						},
+						{
+							"key": "merchantId",
+							"value": "f2d11dfd-7c4c-4640-a751-1481916493cf"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AuthorizationFailed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://paymentgateway:5001/gateway/get",
+					"protocol": "https",
+					"host": [
+						"paymentgateway"
+					],
+					"port": "5001",
+					"path": [
+						"gateway",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get transaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://paymentgateway:5001/gateway/gettransactions?transactionId=GR46dHX3b6",
+					"protocol": "https",
+					"host": [
+						"paymentgateway"
+					],
+					"port": "5001",
+					"path": [
+						"gateway",
+						"gettransactions"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "transactionId",
+							"value": "GR46dHX3b6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://paymentgateway:5001/gateway/gettransactions?merchantId=f2d11dfd-7c4c-4640-a751-1481916493cf&merchantSecret=86xLOo1uHFQOKft",
+					"protocol": "https",
+					"host": [
+						"paymentgateway"
+					],
+					"port": "5001",
+					"path": [
+						"gateway",
+						"gettransactions"
+					],
+					"query": [
+						{
+							"key": "merchantId",
+							"value": "f2d11dfd-7c4c-4640-a751-1481916493cf"
+						},
+						{
+							"key": "merchantSecret",
+							"value": "86xLOo1uHFQOKft"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "56ad2936-65b5-4006-acce-64da344b32cb",
+		"name": "Bank Simulator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Process Payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://acquiringank:5003/simulator/ProcessTransfer?cardNumber=4850180100513665&expiryDate=08/19&amount=100.0&Currency=$&Cvv=769&accountNumber=f2d11dfd-7c4c-4640-a751-1481916493cf",
+					"protocol": "https",
+					"host": [
+						"acquiringank"
+					],
+					"port": "5003",
+					"path": [
+						"simulator",
+						"ProcessTransfer"
+					],
+					"query": [
+						{
+							"key": "cardNumber",
+							"value": "4850180100513665"
+						},
+						{
+							"key": "expiryDate",
+							"value": "08/19"
+						},
+						{
+							"key": "amount",
+							"value": "100.0"
+						},
+						{
+							"key": "Currency",
+							"value": "$"
+						},
+						{
+							"key": "Cvv",
+							"value": "769"
+						},
+						{
+							"key": "accountNumber",
+							"value": "f2d11dfd-7c4c-4640-a751-1481916493cf"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
