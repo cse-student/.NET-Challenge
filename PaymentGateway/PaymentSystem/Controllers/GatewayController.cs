@@ -7,6 +7,7 @@ using PaymentSystem.Core.Domain.EntityFramework.Dto;
 using PaymentSystem.Core.Domain.EntityFramework.Repositories;
 using PaymentSystem.Core.Domain.Providers;
 using PaymentSystem.Core.Domain.StateManagement;
+using PaymentSystem.Core.Helpers;
 using PaymentSystem.Gateway.Domain.ActionFilters;
 using PaymentSystem.Gateway.Models;
 
@@ -105,6 +106,7 @@ namespace PaymentSystem.Gateway.Controllers
       try
       {
         var result = await _paymentRepository.GetTransaction(merchantId, transactionId);
+        SecurityHelper.MaskCardNumber(result.CardInfo);
         return StatusCode((int)HttpStatusCode.OK, result);
       }
       catch (Exception ex)
@@ -129,6 +131,10 @@ namespace PaymentSystem.Gateway.Controllers
       try
       {
         var result = await _paymentRepository.GetTransactions(merchantId);
+        foreach (var transactionInfo in result)
+        {
+          SecurityHelper.MaskCardNumber(transactionInfo.CardInfo);
+        }
         return StatusCode((int)HttpStatusCode.OK, result);
       }
       catch (Exception ex)

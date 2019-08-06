@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
 using System.Text;
+using PaymentSystem.Core.Domain.EntityFramework.Dto;
 
 namespace PaymentSystem.Core.Helpers
 {
@@ -18,6 +19,18 @@ namespace PaymentSystem.Core.Helpers
         result = Convert.ToBase64String(hashedParam);
       }
       return result;
+    }
+
+    public static void MaskCardNumber(CardInfoDto cardInfo)
+    {
+      cardInfo.MaskedCardNumber = cardInfo.CardNumber.ToString();
+      cardInfo.CardNumber = 0;
+      var len = cardInfo.MaskedCardNumber.Length - 4;
+      var result = new string('*', len);
+      result = result + cardInfo.MaskedCardNumber.Substring(len);
+      cardInfo.MaskedCardNumber = result;
+      long.TryParse(cardInfo.MaskedCardNumber.Substring(len), out var number);
+      cardInfo.CardNumber = number;
     }
   }
 }

@@ -7,6 +7,7 @@ namespace PaymentSystem.Core.Domain.EntityFramework.Dto
     public long CardNumber { get; set; }
     public DateTime ExpiryDate { get; set; }
     public int Cvv { get; set; }
+    public string MaskedCardNumber { get; set; }
 
     public CardInfoDto(){}
 
