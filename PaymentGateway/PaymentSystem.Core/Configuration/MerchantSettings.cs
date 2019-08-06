@@ -6,5 +6,6 @@
     public string MerchantSecret { get; set; }
     public string MerchantKey { get; set; }
     public string AccountNumber { get; set; }
+    public string MerchantHashedSecret { get; set; }
   }
 }

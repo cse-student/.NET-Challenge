@@ -2,7 +2,6 @@
 {
   public class Constants
   {
-
     public static class Queries
     {
       public static string GetTransactions = $"Select g.*, META(g).id From transactions g where merchantId = '{PlaceHolders.MerchantId}';";
@@ -16,6 +15,12 @@
       public const string TransactionId = "$transactionId";
       public const string Key = "$key";
       public const string Document = "$document";
+    }
+
+    public static class BucketsName
+    {
+      public const string Transactions = "transactions";
+      public const string Logs = "logs";
     }
   }
 }

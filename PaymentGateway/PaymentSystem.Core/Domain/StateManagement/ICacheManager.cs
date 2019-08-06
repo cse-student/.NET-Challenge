@@ -13,5 +13,7 @@ namespace PaymentSystem.Core.Domain.StateManagement
     MerchantSettings GetMerchantSettings(string merchantId);
     void SetBankSettings(BankSettings bankSettings);
     BankSettings GetBankSettings();
+    void SetAuthenticationSettings(AuthenticationSettings authenticationSettings);
+    AuthenticationSettings GetAuthenticationSettings();
   }
 }

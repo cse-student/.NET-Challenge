@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using PaymentSystem.Core.Configuration;
+using Microsoft.Extensions.Logging;
 using PaymentSystem.Core.Domain.EntityFramework.Dto;
 using PaymentSystem.Core.Domain.EntityFramework.Repositories;
 using PaymentSystem.Core.Domain.Providers;
 using PaymentSystem.Core.Domain.StateManagement;
+using PaymentSystem.Gateway.Domain.ActionFilters;
 using PaymentSystem.Gateway.Models;
 
 namespace PaymentSystem.Gateway.Controllers
@@ -20,71 +19,125 @@ namespace PaymentSystem.Gateway.Controllers
     private readonly ICacheManager _cacheManager;
     private readonly IPaymentRepository _paymentRepository;
     private readonly IBankProvider _bankProvider;
+    private readonly ILogger _logger;
 
-    public GatewayController(ICacheManager cacheManager, IPaymentRepository paymentRepository, IBankProvider bankProvider)
+    public GatewayController(ICacheManager cacheManager, IPaymentRepository paymentRepository,
+      IBankProvider bankProvider, ILogger logger)
     {
       _cacheManager = cacheManager;
       _paymentRepository = paymentRepository;
       _bankProvider = bankProvider;
+      _logger = logger;
     }
 
-    // GET api/values
+    /// <summary>
+    /// Controller action for unauthorized access
+    /// </summary>
+    /// <param name="message"></param>
+    /// <returns></returns>
     [HttpGet]
-    public ActionResult<IEnumerable<string>> Get()
+    public IActionResult AuthenticationFailed(string message)
     {
-      return new string[] { "Welcome To Payment Gateway"};
+      var result = new ProcessPaymentResponse { ErrorMessage = message };
+      return StatusCode((int)HttpStatusCode.Unauthorized, result);
     }
 
-    // POST api/values
+    /// <summary>
+    /// Controller action responsible to process a transaction and storing the latter
+    /// </summary>
+    /// <param name="cardNumber"></param>
+    /// <param name="expiryDate"></param>
+    /// <param name="amount"></param>
+    /// <param name="currency"></param>
+    /// <param name="cvv"></param>
+    /// <param name="merchantId"></param>
+    /// <param name="merchantSecret"></param>
+    /// <returns></returns>
+    [AuthenticationActionFilter]
     [HttpPost]
-    public async Task<IActionResult> ProcessPayment(long cardNumber, DateTime expiryDate, double amount, string currency, int cvv, string merchantId, string merchantSecret)
+    public async Task<IActionResult> ProcessPayment(long cardNumber, DateTime expiryDate, double amount,
+      string currency, int cvv, string merchantId, string merchantSecret)
     {
-      var result = new ProcessPaymentResponse {Success = false};
-      if (string.IsNullOrEmpty(merchantId))
-      {
-        result.ErrorMessage = "parameter \"merchantId\" is mandatory";
-        return StatusCode((int)HttpStatusCode.Unauthorized, result);
-      }
-      MerchantSettings merchantSettings;
-      
+      Guid id;
       try
       {
-        merchantSettings = _cacheManager.GetMerchantSettings(merchantId);
-      }
-      catch
-      {
-        var id = Guid.NewGuid();
-        result.ErrorMessage = "An error occured. Please contact admin with id: " + id;
-        return StatusCode((int)HttpStatusCode.InternalServerError, result);
-      }
-      if (merchantSettings == null)
-      {
-        result.ErrorMessage = "Unrecognized merchant";
-        return StatusCode((int)HttpStatusCode.Unauthorized, result);
-      }
+        var result = new ProcessPaymentResponse { Success = false };
+        var merchantSettings = _cacheManager.GetMerchantSettings(merchantId);
 
-      var response = await _bankProvider.ProcessTransaction(merchantSettings.AccountNumber, cardNumber, cvv, amount, expiryDate,  currency);
-      result.Success = response.Success;
-      var transactionInfo = new TransactionInfoDto(
-        merchantId, response.TransactionId, response.Success, amount, currency, cardNumber,
-        expiryDate, cvv);
-      var storedTransaction = await _paymentRepository.StoreTransaction(transactionInfo);
-      result.TransactionInfo = storedTransaction;
-      return StatusCode((int)HttpStatusCode.OK, result);
+        if (merchantSettings == null)
+        {
+          id = Guid.NewGuid();
+          result.ErrorMessage = "An error occured. Please contact admin with id: " + id;
+          var logMessage = $"[Exception:{id}]: Merchant Settings not being populated in cache";
+          _logger.LogInformation(logMessage);
+          return StatusCode((int)HttpStatusCode.InternalServerError, result);
+        }
+        var response = await _bankProvider.ProcessTransaction(merchantSettings.AccountNumber, cardNumber, cvv, amount,
+          expiryDate, currency);
+        result.Success = response.Success;
+        var transactionInfo = new TransactionInfoDto(
+          merchantId, response.TransactionId, response.Success, amount, currency, cardNumber,
+          expiryDate, cvv);
+        var storedTransaction = await _paymentRepository.StoreTransaction(transactionInfo);
+        result.TransactionInfo = storedTransaction;
+        return StatusCode((int)HttpStatusCode.OK, result);
+      }
+      catch (Exception ex)
+      {
+        id = Guid.NewGuid();
+        _logger.LogInformation(string.Format(Core.Constants.Log.LogFormat, id, merchantId, ex.Message));
+        _logger.LogInformation(string.Format(Core.Constants.Log.LogFormat, id, merchantId, ex.InnerException?.Message));
+      }
+      return StatusCode((int)HttpStatusCode.InternalServerError, $"An internal error occured. Please contact admin with id {id}");
     }
 
+    /// <summary>
+    /// Controller action which retrieves a transaction using the merchantId and transactionId
+    /// </summary>
+    /// <param name="merchantId"></param>
+    /// <param name="transactionId"></param>
+    /// <returns></returns>
+    [AuthenticationActionFilter]
     [HttpGet]
     public async Task<IActionResult> GetTransaction(string merchantId, string transactionId)
     {
-      var result = await _paymentRepository.GetTransaction(merchantId, transactionId);
-      return StatusCode((int)HttpStatusCode.OK, result);
+      Guid id;
+      try
+      {
+        var result = await _paymentRepository.GetTransaction(merchantId, transactionId);
+        return StatusCode((int)HttpStatusCode.OK, result);
+      }
+      catch (Exception ex)
+      {
+        id = Guid.NewGuid();
+        _logger.LogInformation(string.Format(Core.Constants.Log.LogFormat, id, merchantId, ex.Message));
+        _logger.LogInformation(string.Format(Core.Constants.Log.LogFormat, id, merchantId, ex.InnerException?.Message));
+      }
+      return StatusCode((int)HttpStatusCode.InternalServerError, $"An internal error occured. Please contact admin with id {id}");
     }
 
+    /// <summary>
+    /// Gets all transactions of a merchant using the param merchantId
+    /// </summary>
+    /// <param name="merchantId"></param>
+    /// <returns></returns>
+    [AuthenticationActionFilter]
     [HttpGet]
     public async Task<IActionResult> GetTransactions(string merchantId)
     {
-      var result = await _paymentRepository.GetTransactions(merchantId);
-      return StatusCode((int)HttpStatusCode.OK, result);
+      Guid id;
+      try
+      {
+        var result = await _paymentRepository.GetTransactions(merchantId);
+        return StatusCode((int)HttpStatusCode.OK, result);
+      }
+      catch (Exception ex)
+      {
+        id = Guid.NewGuid();
+        _logger.LogInformation(string.Format(Core.Constants.Log.LogFormat, id, merchantId, ex.Message));
+        _logger.LogInformation(string.Format(Core.Constants.Log.LogFormat, id, merchantId, ex.InnerException?.Message));
+      }
+      return StatusCode((int)HttpStatusCode.InternalServerError, $"An internal error occured. Please contact admin with id {id}");
     }
   }
 }

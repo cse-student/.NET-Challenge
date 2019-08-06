@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Couchbase;
 using Couchbase.N1QL;
-using Newtonsoft.Json;
 using PaymentSystem.Core.Domain.EntityFramework.Dto;
 using PaymentSystem.Core.Domain.EntityFramework.Repositories;
 
@@ -12,11 +11,14 @@ namespace PaymentSystem.Infrastructure.Domain.Repositories
 {
   public class CouchbasePaymentRepository : IPaymentRepository
   {
-    private IBucket Bucket { get; set; }
+    private IBucket Bucket { get; }
 
+    /// <summary>
+    /// Repository to store and retrieve data from couchbase db
+    /// </summary>
     public CouchbasePaymentRepository()
     {
-      Bucket = ClusterHelper.GetBucket("transactions");
+      Bucket = ClusterHelper.GetBucket(Constants.BucketsName.Transactions);
     }
 
     public async Task<TransactionInfoDto> StoreTransaction(TransactionInfoDto transactionInfo)

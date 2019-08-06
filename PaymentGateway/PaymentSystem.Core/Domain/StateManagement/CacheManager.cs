@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.Extensions.Caching.Memory;
 using PaymentSystem.Core.Configuration;
 
@@ -8,9 +7,6 @@ namespace PaymentSystem.Core.Domain.StateManagement
   public class CacheManager: ICacheManager
   {
     private IMemoryCache _cache;
-
-    private static readonly Lazy<CacheManager> lazy = new Lazy<CacheManager>(() => new CacheManager());
-    public static CacheManager Instance => lazy.Value;
 
     public Dictionary<string, MerchantSettings> MerchantDetails { get; set; }
 
@@ -30,7 +26,7 @@ namespace PaymentSystem.Core.Domain.StateManagement
       {
         dictionary.Add(merchant.MerchantId, merchant);
       }
-      _cache.Set(Core.Constants.CacheKey.Merchants, dictionary);
+      _cache.Set(Constants.CacheKey.Merchants, dictionary);
     }
 
     /// <summary>
@@ -41,8 +37,8 @@ namespace PaymentSystem.Core.Domain.StateManagement
     public MerchantSettings GetMerchantSettings(string merchantId)
     {
       if (string.IsNullOrWhiteSpace(merchantId)) return null;
-      var merchants = _cache.Get<Dictionary<string, MerchantSettings>>(Core.Constants.CacheKey.Merchants);
-      if (merchants == null) throw new Exception();
+      var merchants = _cache.Get<Dictionary<string, MerchantSettings>>(Constants.CacheKey.Merchants);
+      if (merchants == null) return null;
       merchants.TryGetValue(merchantId, out var result);
       return result;
     }
@@ -55,7 +51,7 @@ namespace PaymentSystem.Core.Domain.StateManagement
     {
       if (bankSettings != null)
       {
-        _cache.Set(Core.Constants.CacheKey.BankSettings, bankSettings);
+        _cache.Set(Constants.CacheKey.BankSettings, bankSettings);
       }
     }
 
@@ -65,7 +61,20 @@ namespace PaymentSystem.Core.Domain.StateManagement
     /// <returns></returns>
     public BankSettings GetBankSettings()
     {
-      return _cache.Get<BankSettings>(Core.Constants.CacheKey.BankSettings);
+      return _cache.Get<BankSettings>(Constants.CacheKey.BankSettings);
+    }
+
+    public void SetAuthenticationSettings(AuthenticationSettings authenticationSettings)
+    {
+      if (authenticationSettings != null)
+      {
+        _cache.Set(Constants.CacheKey.AuthenticationSettings, authenticationSettings);
+      }
+    }
+
+    public AuthenticationSettings GetAuthenticationSettings()
+    {
+      return _cache.Get<AuthenticationSettings>(Constants.CacheKey.AuthenticationSettings);
     }
   }
 }

@@ -20,7 +20,7 @@
     "Payment_System": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "gateway/get",
+      "launchUrl": "gateway/authenticationfailed",
       "applicationUrl": "https://paymentgateway:5001;http://paymentgateway:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
